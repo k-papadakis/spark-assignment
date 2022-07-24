@@ -162,3 +162,5 @@ cython_debug/
 .vscode/
 *.tar.gz
 *.tgz
+metastore_db/
+derby.log
