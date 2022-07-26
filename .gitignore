@@ -164,3 +164,4 @@ cython_debug/
 *.tgz
 metastore_db/
 derby.log
+other/

@@ -8,17 +8,17 @@ from pyspark.sql.types import IntegerType, LongType, StructField, StructType
 spark = SparkSession.builder.appName('csvToParquet').getOrCreate()
 
 artists_schema = StructType([
-    StructField('id', LongType(), False),
-    StructField('name', StringType(), True),
+    StructField('artistId', LongType(), False),
+    StructField('artistName', StringType(), True),
 ])
 
 chart_artist_mapping_schema = StructType([
-    StructField('id', LongType(), False),
+    StructField('songId', LongType(), False),
     StructField('artistId', LongType(), True),
 ])
 
 charts_schema = StructType([
-    StructField('id', LongType(), False),
+    StructField('songId', LongType(), False),
     StructField('title', StringType(), True),
     StructField('position', ShortType(), True),
     StructField('date', DateType(), True),
@@ -29,7 +29,7 @@ charts_schema = StructType([
 ])
 
 regions_schema = StructType([
-    StructField('id', LongType(), False),
+    StructField('countryId', LongType(), False),
     StructField('countryName', StringType(), True),
 ])
 
